@@ -6,7 +6,6 @@ for i in range(1, 1000):
     ba = Decimal(i)/Decimal(1000)
     n = 0
     while n<= 1000:
-        print(n)
         c = ((Decimal(1)+(Decimal(2)*Decimal(ba)))**Decimal(n))*((Decimal(1)-Decimal(ba))**(Decimal(1000)-Decimal(n)))
         if Decimal(c) >= Decimal(1000000000):
             min.append([ba, n])
