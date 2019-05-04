@@ -1,5 +1,11 @@
 from scipy.stats import binom
 from decimal import*
+
+# Win and loss order doesnt matter thus the EQ(1+(2f)^t)(1-f)^1000-t can be derived where f is the bet% and t is the number of wins
+# After this a simple loop of possible values of f finds the lowest number of wins for each given f that is above 1 billion $
+# The P of getting above 1b$ then is the P(wins>=Lowest t for which the EQ is >=1b)
+# ans [.13, 432] ---> 0.999992836187
+
 getcontext().prec = 100
 min = []
 for i in range(1, 1000):
